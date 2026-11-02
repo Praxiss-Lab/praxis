@@ -66,7 +66,7 @@ jobs:
           token: ${{ secrets.PRAXIS_SDK_READ_TOKEN || github.token }}
           persist-credentials: false
       - uses: docker/setup-buildx-action@v4
-      - uses: docker/login-action@v4.6.0
+      - uses: docker/login-action@v4.7.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -143,7 +143,7 @@ jobs:
           path: image-digests
           merge-multiple: true
       - uses: docker/setup-buildx-action@v4
-      - uses: docker/login-action@v4.6.0
+      - uses: docker/login-action@v4.7.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
